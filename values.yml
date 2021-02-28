@@ -1,6 +1,6 @@
 kubernetes: tsuyo_app
 pipelines:
-  name: sample_helm_chart
+  name: sample_helm_deploy
 docker:
   image:
     resourceName: sample_docker__sample_hello_app
@@ -8,4 +8,4 @@ helm:
   chart:
     resourceName: sample_helm_chart_chart
     releaseName: hello_app
-    path: ./hello-app
+    # path: ./hello-app
