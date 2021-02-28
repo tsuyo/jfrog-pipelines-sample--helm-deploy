@@ -5,7 +5,7 @@ Sources for [Deploying to Kubernetes in Pipelines](https://www.jfrog.com/conflue
 ## Prerequisites
 
 - Integrations
-  - tsuyo_staging: Kubernetes
+  - tsuyo_app: Kubernetes
 - Pipelines
   - [JFrog Pipelines Sample: Docker](https://github.com/tsuyo/jfrog-pipelines-sample--docker)
   - [JFrog Pipelines Sample: Helm Chart](https://github.com/tsuyo/jfrog-pipelines-sample--helm-chart)

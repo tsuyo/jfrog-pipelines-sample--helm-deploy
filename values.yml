@@ -1,4 +1,4 @@
-kubernetes: tsuyo_staging
+kubernetes: tsuyo_app
 pipelines:
   name: sample_helm_chart
 docker:
