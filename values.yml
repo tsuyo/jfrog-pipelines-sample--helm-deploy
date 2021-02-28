@@ -3,9 +3,9 @@ pipelines:
   name: sample_helm_chart
 docker:
   image:
-    resourceName: sample_docker__sample_hello_app  
+    resourceName: sample_docker__sample_hello_app
 helm:
   chart:
-    resourceName: sample_helm_chart
+    resourceName: sample_helm_chart_chart
     releaseName: hello_app
     path: ./hello-app
