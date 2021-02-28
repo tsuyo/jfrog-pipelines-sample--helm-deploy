@@ -9,17 +9,12 @@ pipelines:
         configuration:
           helmVersion: 3
           integrations:
-            - name: {{ .Values.artifactory }}
             - name: {{ .Values.kubernetes }}
           inputResources:
             - name: {{ .Values.docker.image.resourceName }}
             - name: {{ .Values.helm.chart.resourceName }}
           releaseName: {{ .Values.helm.chart.releaseName }}
-          flags: "--namespace app"
+          flags: "--namespace {{ .Values.helm.chart.namespace }}"
           valueFilePaths:
-            - values.yaml
+            - {{ .Values.helm.chart.valueFilePaths }}
           # chartPath: {{ .Values.helm.chart.path }}
-        execution:
-          onStart:
-            - echo "[TM] manually login to artifactory"
-            - echo ${int_{{ .Values.artifactory }}_apikey} | docker login --username {{ .Values.artifactoryRepo.username }} --password-stdin ${int_{{ .Values.artifactory }}_url}

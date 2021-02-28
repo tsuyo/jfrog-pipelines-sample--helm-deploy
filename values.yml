@@ -7,8 +7,10 @@ docker:
     resourceName: sample_docker__sample_hello_app
 helm:
   chart:
+    namespace: app
     resourceName: sample_helm_chart_chart
     releaseName: hello-app
+    valueFilePaths: values.yaml
     # path: ./hello-app
 artifactoryRepo:
   username: admin
