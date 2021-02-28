@@ -1,0 +1,20 @@
+template: true
+valuesFilePath: ./values.yml
+
+pipelines:
+  - name: {{ .Values.pipelines.name }}
+    steps:
+      - name: helm_deploy
+        type: HelmDeploy
+        configuration:
+          helmVersion: 3
+          integrations:
+            - name: {{ .Values.kubernetes }}          
+          inputResources:
+            - name: {{ .Values.docker.image.resourceName }}
+            - name: {{ .Values.helm.chart.resourceName }}
+          releaseName: {{ .Values.helm.chart.releaseName }}
+          flags: "--namespace app"
+          valueFilePaths:
+            - values.yaml
+          # chartPath: {{ .Values.helm.chart.path }}
