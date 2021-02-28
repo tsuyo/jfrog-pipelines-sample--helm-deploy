@@ -1,3 +1,4 @@
+artifactory: artifactory
 kubernetes: tsuyo_app
 pipelines:
   name: sample_helm_deploy
