@@ -10,3 +10,5 @@ helm:
     resourceName: sample_helm_chart_chart
     releaseName: hello-app
     # path: ./hello-app
+artifactoryRepo:
+  username: admin
