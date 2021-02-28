@@ -7,5 +7,5 @@ docker:
 helm:
   chart:
     resourceName: sample_helm_chart_chart
-    releaseName: hello_app
+    releaseName: hello-app
     # path: ./hello-app
